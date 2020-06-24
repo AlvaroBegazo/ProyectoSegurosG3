@@ -3,6 +3,7 @@ package com.segurosx.models;
 public class Certificado {
     
     private Integer numero;
+	//holaaaa
 
     public Integer getNumero() {
         return numero;
