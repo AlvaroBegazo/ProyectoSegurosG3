@@ -1,12 +1,6 @@
 package com.segurosx.models;
 
-public class FormaPagoCuponPago implements IFormaPago   {
-
-    @Override
-    public void realizaDescuentoAutomaticoBanco() {
-
-        throw new UnsupportedOperationException();
-    }
+public class CuponPago implements IFormaPagoCupon   {
 
     @Override
     public void generaCuponPago() {
