@@ -1,7 +1,7 @@
 package com.segurosx.models;
 
 public class Poliza {
-
+    // Este es un simple cambio para probar 
     private Integer numero;
 
     public Integer getNumero() {
