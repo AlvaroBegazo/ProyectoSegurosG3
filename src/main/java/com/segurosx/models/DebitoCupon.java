@@ -1,8 +1,12 @@
 package com.segurosx.models;
 
-public class CuponPago implements IFormaPagoCupon   {
+public class DebitoCupon implements IFormaPagoCupon, IFormaPagoDebitoAutomatico{
 
-    // Con esto, solo se implementa las funciones que solo se debe usar la clase
+    @Override
+    public void realizaDescuentoAutomaticoBanco() {
+        System.out.println("Genera cargo en la cuenta de debito automatico");
+
+    }
 
     @Override
     public void generaCuponPago() {
@@ -17,7 +21,5 @@ public class CuponPago implements IFormaPagoCupon   {
         System.out.println("Programa fecha de vencimiento cupon 1 en julio 2020");
         System.out.println("Programa fecha de vencimiento cupon 2 en agosto 2020");
     }
-
-
     
 }
