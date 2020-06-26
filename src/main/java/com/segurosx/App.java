@@ -15,7 +15,7 @@ public class App
         Cliente cliente = new Cliente("Juan Perez");
         SeguroVehicular seguro = new SeguroVehicular("Toyota","Yaris");
         seguro.cacularRiesgo();
-        cliente.setCompraSeguroVehicular(seguro);
+        cliente.setCompraSeguro(seguro);
         cliente.getListaSeguroCliente();
 
    }

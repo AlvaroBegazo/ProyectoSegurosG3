@@ -1,7 +1,10 @@
 package com.segurosx.models;
 
-public class SeguroVehicular extends Seguro {
+// public class SeguroVehicular extends Seguro  implements ISeguro {
+public class SeguroVehicular extends Seguro  {
 
+    protected String marca;
+    protected String modelo;
     
     public SeguroVehicular(String marca, String modelo)    {
 
@@ -23,7 +26,6 @@ public class SeguroVehicular extends Seguro {
 
     @Override
     public String getDetalleSeguro()    {
-
         return "Seg. Vehicular Numero: " + this.numero + " con riesgo: " + this.nivelRiesgo;
     }    
 }

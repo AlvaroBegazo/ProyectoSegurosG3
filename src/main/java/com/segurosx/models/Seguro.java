@@ -3,17 +3,26 @@ package com.segurosx.models;
 import java.util.Random;
 
 public abstract class Seguro {
+    // 5. Implemente una nueva jerarquía de clases para Seguro Vehicular, que sea para seguro de auto por
+    // robo, por choque, por todo riesgo y seguro SOAT. Utilice los principios LSP (sustitución de Liskov) e ISP.
 
     protected Integer numero;
     protected Certificado certificado;
     protected Poliza poliza;
     protected String nivelRiesgo = "NINGUNO";
-    protected String bancoTarjeta;
-    protected String marca;
-    protected String modelo;
 
     public Seguro() {
         this.numero = new Integer(new Random().nextInt());
+    }
+
+    // Getters y Setters
+
+    public Integer getNumero() {
+        return numero;
+    }
+
+    public void setNumero(Integer numero) {
+        this.numero = numero;
     }
 
     public Certificado getCertificado() {
@@ -32,20 +41,13 @@ public abstract class Seguro {
         this.poliza = poliza;
     }
 
-    public Integer getNumero() {
-        return numero;
-    }
-
-    public void setNumero(Integer numero) {
-        this.numero = numero;
-    }
 
     public String getNivelRiesgo()  {
         return this.nivelRiesgo;
     }
 
-    public abstract String getDetalleSeguro();
 
+    public abstract String getDetalleSeguro();
     public abstract void cacularRiesgo();
 
 }
