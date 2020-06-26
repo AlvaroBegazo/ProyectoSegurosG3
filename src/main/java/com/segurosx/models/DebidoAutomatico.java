@@ -1,5 +1,7 @@
 package com.segurosx.models;
 
+import com.segurosx.interfaces.IFormaPagoDebitoAutomatico;
+
 public class DebidoAutomatico implements IFormaPagoDebitoAutomatico {
 
     @Override

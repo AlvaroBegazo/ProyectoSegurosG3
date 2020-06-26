@@ -1,4 +1,4 @@
-package com.segurosx.models;
+package com.segurosx.interfaces;
 
 public interface IFormaPagoCupon    {
     
