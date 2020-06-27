@@ -32,5 +32,18 @@ public class SeguroTarjeta extends Seguro implements ISeguroTarjeta {
 	public String getFechaTarjeta() {
         return "26/6/2020";
     }
+
+
+
+	@Override
+	public void calcularRiesgo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getNivelRiesgo() {
+		return this.nivelRiesgo;
+	}
     
 }

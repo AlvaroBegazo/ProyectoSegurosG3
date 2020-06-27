@@ -31,41 +31,55 @@ public class App
         // cliente.getListaSeguroCliente();
 
 */
-        Cliente cliente2 = new Cliente("Profesor1");
 
-        SeguroAutoChoque seguroAutoChoque =  new SeguroAutoChoque("Toyota2","Yaris2");
-        seguroAutoChoque.cacularRiesgo();
-        cliente2.setCompraSeguro(seguroAutoChoque);
 
-        cliente2.getListaSeguroCliente();
 
-        
-        Cliente cliente3 = new Cliente("Profesor2");
 
-        SeguroAutoRobo seguroAutoRobo =  new SeguroAutoRobo("Toyota3","Yaris3");
-        seguroAutoRobo.cacularRiesgo();
-        cliente3.setCompraSeguro(seguroAutoRobo);
 
-        cliente3.getListaSeguroCliente();
 
-        Cliente cliente4 = new Cliente("Profesor3");
 
-        SeguroAutoSoat seguroSoat =  new SeguroAutoSoat("Toyota4","Yaris4");
-        seguroSoat.cacularRiesgo();
-        cliente4.setCompraSeguro(seguroSoat);
+        // Cliente cliente2 = new Cliente("Profesor1");
 
-        cliente4.getListaSeguroCliente();
+        // SeguroAutoChoque seguroAutoChoque =  new SeguroAutoChoque("Toyota2","Yaris2");
+        // seguroAutoChoque.cacularRiesgo();
+        // cliente2.setCompraSeguro(seguroAutoChoque);
 
-        Cliente cliente5 = new Cliente("Profesor4");
-
-        SeguroAutoTodoRiesgo seguroAutoTodoRiesgo =  new SeguroAutoTodoRiesgo("Toyota5","Yaris5");
-        seguroAutoTodoRiesgo.cacularRiesgo();
-        cliente5.setCompraSeguro(seguroAutoTodoRiesgo);
-
-        cliente5.getListaSeguroCliente();
-
+        // cliente2.getListaSeguroCliente();
 
         
+        // Cliente cliente3 = new Cliente("Profesor2");
+
+        // SeguroAutoRobo seguroAutoRobo =  new SeguroAutoRobo("Toyota3","Yaris3");
+        // seguroAutoRobo.cacularRiesgo();
+        // cliente3.setCompraSeguro(seguroAutoRobo);
+
+        // cliente3.getListaSeguroCliente();
+
+        // Cliente cliente4 = new Cliente("Profesor3");
+
+        // SeguroAutoSoat seguroSoat =  new SeguroAutoSoat("Toyota4","Yaris4");
+        // seguroSoat.cacularRiesgo();
+        // cliente4.setCompraSeguro(seguroSoat);
+
+        // cliente4.getListaSeguroCliente();
+
+        // Cliente cliente5 = new Cliente("Profesor4");
+
+        // SeguroAutoTodoRiesgo seguroAutoTodoRiesgo =  new SeguroAutoTodoRiesgo("Toyota5","Yaris5");
+        // seguroAutoTodoRiesgo.cacularRiesgo();
+        // cliente5.setCompraSeguro(seguroAutoTodoRiesgo);
+
+        // cliente5.getListaSeguroCliente();
+
+
+        Cliente cliente = new Cliente("Juan Perez");
+        
+        
+        SeguroVehicular seguro = new SeguroVehicular("Toyota","Yaris");
+        seguro.calcularPrima();
+        seguro.cacularRiesgo();
+        cliente.setCompraSeguro(seguro);
+        cliente.getListaSeguroCliente();
 
    }
 }

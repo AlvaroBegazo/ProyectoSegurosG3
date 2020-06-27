@@ -13,8 +13,8 @@ public  class SeguroVehicular extends Seguro implements ISeguroVehicular{
         this.modelo = modelo;
     }
 
-    @Override
-    public void cacularRiesgo()   {
+    @Override  
+    public void calcularRiesgo()   {
 
         if (this.marca.equals("Toyota") && this.modelo.equals("Yaris")) {
             this.nivelRiesgo = "ALTO";
@@ -34,5 +34,21 @@ public  class SeguroVehicular extends Seguro implements ISeguroVehicular{
     public String getFechaSeguroVehicular() {
         return "26/6/2020";
     }
+
+
+	@Override
+	public String getNivelRiesgo() {
+		return this.nivelRiesgo;
+	}
+
+
+
+
+    
+	@Override
+	public void cacularRiesgo() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

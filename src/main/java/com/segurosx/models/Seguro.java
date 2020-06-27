@@ -3,23 +3,32 @@ package com.segurosx.models;
 import java.util.Random;
 
 public abstract class Seguro{
+// Mejore la implementación de Seguro con Poliza y Certificado para llamarlas desde la clase cliente App.java respetando el principio de DIP (inversión de dependencia).
 
     protected Integer numero;
-    // protected String pol;
-    // protected String cer;
     protected Certificado certificado;
     protected Poliza poliza;
     protected String nivelRiesgo = "NINGUNO";
+    
 
-
-    protected In ann;
+    protected ICertificado ann;
+    protected ICalculoPrima iCalculoPrima;
 
     public Seguro() {
         this.numero = new Integer(new Random().nextInt());
     }
 
+    public Seguro(ICalculoPrima iCalculoPrima) {
+        this.iCalculoPrima = iCalculoPrima;
+    }
+
     public void setCertificado(Certificado a){
         ann.setCertificado(a);
+    }
+
+    public void calcularPrima(){
+        // Double prima = calculador.getPrima();
+        System.out.println(iCalculoPrima.getPrima());
     }
 
     // public void getCertificado()
@@ -51,13 +60,22 @@ public abstract class Seguro{
         this.numero = numero;
     }
 
-    public String getNivelRiesgo()  {
-        return this.nivelRiesgo;
-    }
+    // public String getNivelRiesgo()  {
+    //     return this.nivelRiesgo;
+    // }
+
+
+
 
     public abstract String getDetalleSeguro();
 
     public abstract void cacularRiesgo();
+
+    public abstract void calcularRiesgo();
+    public abstract String getNivelRiesgo();
+
+
+
 
 
 }
