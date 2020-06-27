@@ -1,6 +1,6 @@
 package com.segurosx.models;
 
-public class Certificado {
+public class Certificado   {
     
     private Integer numero;
 
@@ -11,5 +11,9 @@ public class Certificado {
     public void setNumero(Integer numero) {
         this.numero = numero;
     }
+
+    // public void setObject( Integer numero ){
+    //     this.numero = numero;
+    // }
 
 }

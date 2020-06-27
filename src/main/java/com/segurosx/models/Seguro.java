@@ -2,32 +2,46 @@ package com.segurosx.models;
 
 import java.util.Random;
 
-public abstract class Seguro {
+public abstract class Seguro{
 
     protected Integer numero;
+    // protected String pol;
+    // protected String cer;
     protected Certificado certificado;
     protected Poliza poliza;
     protected String nivelRiesgo = "NINGUNO";
+
+
+    protected In ann;
 
     public Seguro() {
         this.numero = new Integer(new Random().nextInt());
     }
 
-    public Certificado getCertificado() {
-        return certificado;
+    public void setCertificado(Certificado a){
+        ann.setCertificado(a);
     }
 
-    public void setCertificado(Certificado certificado) {
-        this.certificado = certificado;
-    }
+    // public void getCertificado()
 
-    public Poliza getPoliza() {
-        return poliza;
-    }
 
-    public void setPoliza(Poliza poliza) {
-        this.poliza = poliza;
-    }
+    // public Certificado getCertificado() {
+    //     return certificado;
+    // }
+
+    // public void setCertificado(Certificado certificado) {
+    //     this.certificado = certificado;
+    // }
+    
+
+    // public Poliza getPoliza() {
+    //     return poliza;
+    // }
+
+    // public void setPoliza(Poliza poliza) {
+    //     this.poliza = poliza;
+    // }
+
 
     public Integer getNumero() {
         return numero;

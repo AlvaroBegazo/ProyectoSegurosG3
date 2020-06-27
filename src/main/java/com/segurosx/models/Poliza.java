@@ -11,4 +11,8 @@ public class Poliza {
     public void setNumero(Integer numero) {
         this.numero = numero;
     }
+
+    // public void setObject( Integer numero ){
+    //     this.numero = numero;
+    // }
 }
