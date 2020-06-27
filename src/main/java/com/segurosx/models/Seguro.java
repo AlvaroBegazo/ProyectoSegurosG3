@@ -16,20 +16,18 @@ public abstract class Seguro {
         this.numero = new Integer(new Random().nextInt());
     }
 
-    public Inyec getCertificado() {
-        return certificado;
+    
+    public void setPoliza(Inyec poliza){
+       this.poliza=poliza; 
     }
-
     public void setCertificado(Inyec certificado) {
         this.certificado = certificado;
     }
-
+    public Inyec getCertificado() {
+        return certificado;
+    }
     public Inyec getPoliza() {
         return poliza;
-    }
-
-    public void setPoliza(Inyec poliza) {
-        this.poliza = poliza;
     }
 
     public Integer getNumero() {
