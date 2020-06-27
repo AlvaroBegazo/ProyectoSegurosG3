@@ -5,8 +5,8 @@ import java.util.Random;
 public abstract class Seguro {
 
     protected Integer numero;
-    protected Certificado certificado;
-    protected Poliza poliza;
+    protected Inyec certificado;
+    protected Inyec poliza;
     protected String nivelRiesgo = "NINGUNO";
     protected String bancoTarjeta;
     protected String marca;
@@ -16,19 +16,19 @@ public abstract class Seguro {
         this.numero = new Integer(new Random().nextInt());
     }
 
-    public Certificado getCertificado() {
+    public Inyec getCertificado() {
         return certificado;
     }
 
-    public void setCertificado(Certificado certificado) {
+    public void setCertificado(Inyec certificado) {
         this.certificado = certificado;
     }
 
-    public Poliza getPoliza() {
+    public Inyec getPoliza() {
         return poliza;
     }
 
-    public void setPoliza(Poliza poliza) {
+    public void setPoliza(Inyec poliza) {
         this.poliza = poliza;
     }
 

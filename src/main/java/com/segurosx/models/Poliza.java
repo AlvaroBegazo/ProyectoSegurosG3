@@ -1,6 +1,6 @@
 package com.segurosx.models;
 
-public class Poliza {
+public class Poliza implements Inyec{
 
     private Integer numero;
 

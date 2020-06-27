@@ -1,6 +1,6 @@
 package com.segurosx.models;
 
-public class Certificado {
+public class Certificado implements  Inyec{
     
     private Integer numero;
 
