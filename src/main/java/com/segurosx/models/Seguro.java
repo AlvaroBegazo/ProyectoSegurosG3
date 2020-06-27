@@ -6,8 +6,8 @@ public abstract class Seguro implements ISeguro{
 // Mejore la implementación de Seguro con Poliza y Certificado para llamarlas desde la clase cliente App.java respetando el principio de DIP (inversión de dependencia).
 
     protected Integer numero;
-    protected Certificado certificado;
-    protected Poliza poliza;
+    protected IDatos certificado;
+    protected IDatos poliza;
     protected String nivelRiesgo = "NINGUNO";
     
     protected ICalculoPrima iCalculoPrima;
@@ -16,7 +16,11 @@ public abstract class Seguro implements ISeguro{
         this.numero = new Integer(new Random().nextInt());
     }
 
-    public Seguro(ICalculoPrima iCalculoPrima) {
+    // public Seguro(ICalculoPrima iCalculoPrima) {
+    //     this.iCalculoPrima = iCalculoPrima;
+    // }
+
+    public void prueba(ICalculoPrima iCalculoPrima){
         this.iCalculoPrima = iCalculoPrima;
     }
 

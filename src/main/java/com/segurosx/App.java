@@ -2,11 +2,18 @@ package com.segurosx;
 import com.segurosx.models.Poliza;
 import com.segurosx.models.Certificado;
 import com.segurosx.models.SeguroAutoChoque;
+
+import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.segurosx.models.CalculoPrimaPeru;
 import com.segurosx.models.Cliente;
+import com.segurosx.models.ICalculoPrima;
 import com.segurosx.models.SeguroAutoRobo;
 import com.segurosx.models.SeguroAutoSoat;
 import com.segurosx.models.SeguroAutoTodoRiesgo;
-import com.segurosx.models.SeguroTarjeta;
+// import com.segurosx.models.SeguroTarjeta;
 import com.segurosx.models.SeguroVehicular;
 
 /**
@@ -17,8 +24,8 @@ public class App
 {
     public static void main( String[] args )
     {
-
         // PREGUNTA 5
+
         Cliente cliente2 = new Cliente("Profesor1");
 
         SeguroAutoChoque seguroAutoChoque =  new SeguroAutoChoque("Toyota2","Yaris2");
@@ -54,10 +61,6 @@ public class App
 
 
 
-
-
-
-
         // PREGUNTA 6
         Cliente cliente8 = new Cliente("Juan Perez");
         
@@ -78,6 +81,25 @@ public class App
         cliente8.getListaSeguroCliente();
 
 
+
+
+        // PREGUNTA 7
+
+        /*
+        
+        */
+        ArrayList<Certificado> a =  new ArrayList<Certificado>();
+        Certificado c1 = new  Certificado();
+        Certificado c2 = new  Certificado();
+        Certificado c3 = new  Certificado();
+
+        a.add(c1);
+        a.add(c2);
+        a.add(c3);
+
+        ICalculoPrima x = new CalculoPrimaPeru(a);
+        System.out.println("PRIMA: ");
+        System.out.println(x.getPrima());
 
 
 
