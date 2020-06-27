@@ -54,7 +54,7 @@ public class App
 
    public void iniciar(){
 
-        Info applicationInfo = new Info()
+    Info applicationInfo = new Info()
         .version("1.0")
         .description("Seguro API");
     OpenApiOptions openApi = new OpenApiOptions(applicationInfo)

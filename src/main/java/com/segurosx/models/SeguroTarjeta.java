@@ -1,6 +1,8 @@
 package com.segurosx.models;
 
-public class SeguroTarjeta extends Seguro {
+public class SeguroTarjeta extends Seguro implements ISeguroTarjeta {
+
+    protected String bancoTarjeta;
   
 
     public SeguroTarjeta(String bancoTarjeta)    {
@@ -25,4 +27,10 @@ public class SeguroTarjeta extends Seguro {
         
         return "Seg. Tarjeta Numero: " + this.numero + " con riesgo: " + this.nivelRiesgo;
     }
+
+	@Override
+	public String getFechaTarjeta() {
+        return "26/6/2020";
+    }
+    
 }
