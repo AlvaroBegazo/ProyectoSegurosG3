@@ -2,6 +2,7 @@ package com.segurosx;
 
 import com.segurosx.models.Certificado;
 import com.segurosx.models.Cliente;
+import com.segurosx.models.Inyec;
 import com.segurosx.models.Poliza;
 import com.segurosx.models.SeguroVehicular;
 
@@ -17,11 +18,11 @@ public class App
         Cliente cliente = new Cliente("Juan Perez");
         
         //crando poliza
-        Poliza poli = new Poliza();
-        poli.setNumero(4544);
+        Inyec poli = new Poliza(12);
+        
         //creandocertificado
-        Certificado cert = new Certificado();
-        cert.setNumero(5555);  
+        Inyec cert = new Certificado(456);
+       
 
         
         SeguroVehicular seguro = new SeguroVehicular("Toyota","Yaris");
