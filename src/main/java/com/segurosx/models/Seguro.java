@@ -2,13 +2,12 @@ package com.segurosx.models;
 
 import java.util.Random;
 
-public class Seguro {
+public abstract class Seguro {
 
-    private Integer numero;
-    
-    private Certificado certificado;
-
-    private Poliza poliza;
+    protected Integer numero;
+    protected Certificado certificado;
+    protected Poliza poliza;
+    protected String nivelRiesgo = "NINGUNO";
 
     public Seguro() {
         this.numero = new Integer(new Random().nextInt());
@@ -30,13 +29,6 @@ public class Seguro {
         this.poliza = poliza;
     }
 
-    public String getDetalleSeguro()    {
-
-        return "Numero: " + this.numero; 
-               //"Poliza: " + this.getPoliza().getNumero() + " - " +
-               //"Certificado: " + this.getCertificado().getNumero();
-    }
-
     public Integer getNumero() {
         return numero;
     }
@@ -44,5 +36,14 @@ public class Seguro {
     public void setNumero(Integer numero) {
         this.numero = numero;
     }
+
+    public String getNivelRiesgo()  {
+        return this.nivelRiesgo;
+    }
+
+    public abstract String getDetalleSeguro();
+
+    public abstract void cacularRiesgo();
+
 
 }
