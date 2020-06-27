@@ -1,13 +1,9 @@
 package com.segurosx.models;
 
-public class Certificado   {
+public class Certificado  implements IDatos {
     
     private Integer numero;
-    private ICertificado ic;
     
-    public Certificado(ICertificado ic) {
-        this.ic = ic;
-    }
 
     public Integer getNumero() {
         return numero;

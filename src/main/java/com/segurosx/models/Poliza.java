@@ -1,6 +1,6 @@
 package com.segurosx.models;
 
-public class Poliza {
+public class Poliza implements IDatos {
 
     private Integer numero;
 

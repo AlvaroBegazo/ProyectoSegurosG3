@@ -10,8 +10,6 @@ public abstract class Seguro{
     protected Poliza poliza;
     protected String nivelRiesgo = "NINGUNO";
     
-
-    protected ICertificado ann;
     protected ICalculoPrima iCalculoPrima;
 
     public Seguro() {
@@ -22,10 +20,6 @@ public abstract class Seguro{
         this.iCalculoPrima = iCalculoPrima;
     }
 
-    public void setCertificado(Certificado a){
-        ann.setCertificado(a);
-    }
-
     public void calcularPrima(){
         // Double prima = calculador.getPrima();
         System.out.println(iCalculoPrima.getPrima());
@@ -34,22 +28,22 @@ public abstract class Seguro{
     // public void getCertificado()
 
 
-    // public Certificado getCertificado() {
-    //     return certificado;
-    // }
+    public IDatos getCertificado() {
+        return certificado;
+    }
 
-    // public void setCertificado(Certificado certificado) {
-    //     this.certificado = certificado;
-    // }
+    public void setCertificado(Certificado certificado) {
+        this.certificado = certificado;
+    }
     
 
-    // public Poliza getPoliza() {
-    //     return poliza;
-    // }
+    public IDatos getPoliza() {
+        return poliza;
+    }
 
-    // public void setPoliza(Poliza poliza) {
-    //     this.poliza = poliza;
-    // }
+    public void setPoliza(Poliza poliza) {
+        this.poliza = poliza;
+    }
 
 
     public Integer getNumero() {
@@ -64,18 +58,11 @@ public abstract class Seguro{
     //     return this.nivelRiesgo;
     // }
 
-
-
-
     public abstract String getDetalleSeguro();
 
     public abstract void cacularRiesgo();
 
     public abstract void calcularRiesgo();
     public abstract String getNivelRiesgo();
-
-
-
-
 
 }
