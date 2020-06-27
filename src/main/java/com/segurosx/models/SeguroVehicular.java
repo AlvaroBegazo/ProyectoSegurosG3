@@ -42,13 +42,4 @@ public  class SeguroVehicular extends Seguro implements ISeguroVehicular{
 	}
 
 
-
-
-    
-	@Override
-	public void cacularRiesgo() {
-		// TODO Auto-generated method stub
-		
-	}
-
 }

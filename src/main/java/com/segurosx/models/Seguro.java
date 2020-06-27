@@ -2,7 +2,7 @@ package com.segurosx.models;
 
 import java.util.Random;
 
-public abstract class Seguro{
+public abstract class Seguro implements ISeguro{
 // Mejore la implementación de Seguro con Poliza y Certificado para llamarlas desde la clase cliente App.java respetando el principio de DIP (inversión de dependencia).
 
     protected Integer numero;
@@ -58,11 +58,10 @@ public abstract class Seguro{
     //     return this.nivelRiesgo;
     // }
 
-    public abstract String getDetalleSeguro();
+    // public abstract String getDetalleSeguro();
 
-    public abstract void cacularRiesgo();
+    // public abstract void calcularRiesgo();
 
-    public abstract void calcularRiesgo();
-    public abstract String getNivelRiesgo();
+    // public abstract String getNivelRiesgo();
 
 }

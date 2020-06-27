@@ -12,7 +12,7 @@ public class SeguroTarjeta extends Seguro implements ISeguroTarjeta {
     }
 
     @Override
-    public void cacularRiesgo()   {
+    public void calcularRiesgo()   {
 
         if (this.bancoTarjeta.equals("AZTECA")) {
             this.nivelRiesgo = "ALTO";
@@ -32,14 +32,6 @@ public class SeguroTarjeta extends Seguro implements ISeguroTarjeta {
 	public String getFechaTarjeta() {
         return "26/6/2020";
     }
-
-
-
-	@Override
-	public void calcularRiesgo() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public String getNivelRiesgo() {
