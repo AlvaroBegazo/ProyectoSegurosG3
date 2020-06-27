@@ -1,8 +1,6 @@
 package com.segurosx.models;
 
-import com.segurosx.interfaces.IFormaPagoCupon;
-
-public class CuponPago implements IFormaPagoCupon {
+public class CuponPago implements IFormaPagoCupon   {
 
     @Override
     public void generaCuponPago() {

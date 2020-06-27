@@ -3,15 +3,27 @@ package com.segurosx.models;
 import java.util.Random;
 
 public abstract class Seguro {
-
+    private String id;
     protected Integer numero;
     protected Certificado certificado;
     protected Poliza poliza;
+    protected String seguroTipo;
     protected String nivelRiesgo = "NINGUNO";
-    
+    protected String banco;
+    protected String marca;
+    protected String modelo;
 
     public Seguro() {
         this.numero = new Integer(new Random().nextInt());
+    }
+
+    
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public Certificado getCertificado() {
@@ -42,9 +54,36 @@ public abstract class Seguro {
         return this.nivelRiesgo;
     }
 
-    public abstract String getDetalleSeguro();
+    public String getSeguroTipo() {
+        return seguroTipo;
+    }
 
-    public abstract void cacularRiesgo();
+    public void setSeguroTipo(String seguroTipo) {
+        this.seguroTipo = seguroTipo;
+    }
 
+    public String getBanco() {
+        return banco;
+    }
+
+    public void setBanco(String banco) {
+        this.banco = banco;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
 
 }

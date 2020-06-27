@@ -8,17 +8,17 @@ import io.swagger.v3.oas.models.info.Info;
 
 import com.segurosx.config.DBConnectionManager;
 import com.segurosx.controller.ClienteController;
+import com.segurosx.controller.SeguroController;
 import com.segurosx.repositories.impl.ClienteRepositoryImpl;
+import com.segurosx.repositories.impl.SeguroRepositoryImpl;
 
-/**
- * HRCS
- *
- */
+
 public class App 
 {
 
     private final DBConnectionManager manager;
     private final ClienteController clienteController;
+    private final SeguroController seguroController;
 
     public App()
     {
@@ -26,31 +26,17 @@ public class App
       
         ClienteRepositoryImpl clienteRepositoryImpl =  new ClienteRepositoryImpl(this.manager.getDatabase());
         this.clienteController = new ClienteController(clienteRepositoryImpl);
+
+        SeguroRepositoryImpl seguroRepositoryImpl =  new SeguroRepositoryImpl(this.manager.getDatabase());
+        this.seguroController = new SeguroController(seguroRepositoryImpl);
+
       }
 
     public static void main( String[] args )
     {
         new App().iniciar();
-        /*
-        Cliente cliente = new Cliente("Juan Perez");
-        
-        SeguroVehicular seguro = new SeguroVehicular("Toyota","Yaris");
-        seguro.cacularRiesgo();
-        cliente.setCompraSeguro(seguro);
 
-        SeguroTarjeta seguro2 = new SeguroTarjeta("BCP");
-        seguro2.cacularRiesgo();
-        cliente.setCompraSeguro(seguro2);
-
-        
-        SeguroTarjeta seguro3 = new SeguroTarjeta("AZTECA");
-        seguro3.cacularRiesgo();
-        cliente.setCompraSeguro(seguro3);
-
-        cliente.getListaSeguroCliente();
-        */
-    
-   }
+    }
 
    public void iniciar(){
 
@@ -69,6 +55,18 @@ public class App
     //registrar cliente
     app.get("/api/RegistrarCliente", this.clienteController::create);
 
+    //registrar seguro vehicular
+    app.get("/api/RegistrarSeguroVehicular", this.seguroController::create);
+
+
+    //registrar seguro tarjeta
+    app.get("/api/RegistrarSeguroTarjeta", this.seguroController::create);
+
+    //cliente compra seguro
+   // app.get("/api/ComprarSeguro/:id", this.clienteController::comprarSeguro);
+
+
    }
 
 }
+

@@ -1,6 +1,6 @@
 package com.segurosx.models;
 
-public class Certificado {
+public class Certificado implements ICertificado {
     
     private Integer numero;
 
@@ -10,6 +10,11 @@ public class Certificado {
 
     public void setNumero(Integer numero) {
         this.numero = numero;
+    }
+
+    @Override
+    public void mostrarNumeroCertificado(Integer numero){
+        System.out.println(numero);
     }
 
 }

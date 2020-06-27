@@ -1,8 +1,8 @@
 package com.segurosx.models;
 
-public class SeguroTarjeta extends Seguro implements ISeguroTarjeta {
+public class SeguroTarjeta extends Seguro {
 
-    protected String bancoTarjeta;
+    private String bancoTarjeta;
   
 
     public SeguroTarjeta(String bancoTarjeta)    {
@@ -12,25 +12,8 @@ public class SeguroTarjeta extends Seguro implements ISeguroTarjeta {
     }
 
     @Override
-    public void cacularRiesgo()   {
-
-        if (this.bancoTarjeta.equals("AZTECA")) {
-            this.nivelRiesgo = "ALTO";
-        }
-        else {
-            this.nivelRiesgo = "BAJO";
-        } 
+    public String toString() {
+        return "SeguroTarjeta [bancoTarjeta=" + bancoTarjeta + "]";
     }
 
-    @Override
-    public String getDetalleSeguro() {
-        
-        return "Seg. Tarjeta Numero: " + this.numero + " con riesgo: " + this.nivelRiesgo;
-    }
-
-	@Override
-	public String getFechaTarjeta() {
-        return "26/6/2020";
-    }
-    
 }

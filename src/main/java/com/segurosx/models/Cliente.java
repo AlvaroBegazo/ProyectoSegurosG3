@@ -1,19 +1,14 @@
 package com.segurosx.models;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente {
     private String id;
     private String nombre;
     private String apellido;
-    private List<Seguro> seguros;
-
-    public Cliente(String nombre)   {
-
-        this.nombre = nombre;
-        this.seguros = new ArrayList<Seguro>();
-    }
+    private Integer edad;
+    private String direccion;
+    private List<Seguro> seguro;
 
     public String getId() {
         return id;
@@ -22,7 +17,7 @@ public class Cliente {
     public void setId(String id) {
         this.id = id;
     }
-    
+
     public String getNombre() {
         return nombre;
     }
@@ -39,27 +34,30 @@ public class Cliente {
         this.apellido = apellido;
     }
 
-    public List<Seguro> getSeguros() {
-        return seguros;
+    public Integer getEdad() {
+        return edad;
     }
 
-    public void setSeguros(List<Seguro> seguros) {
-        this.seguros = seguros;
+    public void setEdad(Integer edad) {
+        this.edad = edad;
     }
 
-    public void setCompraSeguro(Seguro seguro) {
-
-        this.seguros.add( seguro );
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void getListaSeguroCliente()    {
-
-        System.out.println("Nombre: " + this.nombre );
-        for (Seguro seguro : seguros )  {
-
-            System.out.println( "Seguro: " + seguro.getDetalleSeguro());
-        }
-        
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
+
+    public List<Seguro> getSeguro() {
+        return seguro;
+    }
+
+    public void setSeguro(List<Seguro> seguro) {
+        this.seguro = seguro;
+    }
+
+    
 
 }
